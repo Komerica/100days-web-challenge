@@ -1,0 +1,44 @@
+div {
+    background-color: #c7c7c7;
+    padding: 20px;
+    text-align: center;
+}
+
+p {
+    color: black;
+    padding: 50px;
+    margin: 0;
+}
+
+#container {
+    background-color: #521751;
+
+}
+
+#container p {
+    color: white;
+}
+
+#one {
+    background-color: #943092;
+
+}
+
+#two {
+    background-color: #c95bc7;
+    /* ↓ 이걸 해주면 #three 는 #two 를 무시하고 그대로 entire line 을 차지함 */
+    /*   ↓ background-image 를 nav 까지 덮을 수 있는 방법! */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 🟩 box-sizing property: default value is "content-box" */
+    /* ✔ box-sizing: border-box 로 바꾸면 content + padding + border 다 포함해서 사이즈 측정! */
+    box-sizing: border-box; /* -> 무조건 있어야할듯 */
+    border: 10px solid black;
+
+}
+
+#three {
+    background-color: #dd61db;
+}

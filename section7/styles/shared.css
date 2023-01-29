@@ -1,0 +1,63 @@
+body {
+    /* 🟩 ↓ custom font 는 '' 안에 집어넣어야 함! */
+    font-family: "Quicksand", sans-serif; /* fallback 으로 sans-serif 넣어주기*/
+    margin: 0;
+    background-color: mediumpurple;
+}
+ul {
+    list-style: none; /* bullet points 제거 */
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+
+    /* 🟥 Take the header out of the document flow by adding "position: absolute", then main>section 에 있는 background-image 를 위로 끌어올릴 수 있음! */
+    position: absolute;
+    top: 0; /* body 안의 첫번째 tag(header)라 top, left 안붙여줘도 좌측상단으로 붙는다! (생략 가능하지만, 구조가 바뀔수도 있으니 붙여주자!) */
+    left: 0;
+
+    /* 🟥 이것만 하면 ancestor 인 body 태그의 100%만큼 width 가 큰다. */
+    width: 100%;
+
+    /* 🟥 그래서 ↓ 아래 코드를 무조건 작성해줘야함! */
+    box-sizing: border-box;
+}
+
+#page-logo a {
+    padding: 10px;
+    font-family: "Oleo Script", sans-serif;
+    color: rgb(245, 243, 160);
+    font-size: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* text-shadow OR box-shadow
+        1. Horizontal offset (left to right)
+        2. Vertical offset (top to bottom)
+        3. Blur radius
+    */
+    text-shadow: 1px 1px 2px rgb(0,0,0);
+}
+header ul {
+    display: flex;
+}
+header li {
+    text-align: right;
+    margin-left: 20px;
+}
+header nav a {
+    color: rgb(255, 251, 0);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 12px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+header nav a:hover {
+    color: rgb(77, 77, 77);
+    background-color: rgb(255, 251, 0);
+}
+

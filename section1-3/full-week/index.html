@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Oswald:wght@700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/section1-3/styles/shared.css">    <!--Absolute path (find from the project root folder-->
+    <link rel="stylesheet" href="/section1-3/styles/full-week.css">
+    <link rel="icon" href="/section1-3/images/favicon.ico" type="image/x-icon">
+    <title>My Upcoming Challenges</title>
+</head>
+<body>
+<header>
+    <!--h1+p block tag 가 두개 동시에 오면 margin collapsing(only for vertical margin)이 일어남!-->
+    <!--inline element 는 vertical margin 자체가 적용안됨!-->
+    <h1>My Upcoming Challenges</h1> <!--display: block-->
+    <p id="description">These are my goals for the next days</p> <!--display: block-->
+    <a href="/section1-3">View Today's Challenge</a>    <!--Absolute path (by default, it looks for index.html)-->
+</header>
+<main>
+    <ol>
+        <li>
+            <h2>Tuesday, April 2nd</h2>
+            <p>Repeat what I learned about HTML & CSS</p>
+        </li>
+        <li class="highlight-goal">
+            <h2>Wednesday, April 3rd</h2>
+            <p>Do the exercises on HTML & CSS</p>
+        </li>
+        <li class="highlight-goal">
+            <h2>Thursday, April 4th</h2>
+            <p>Dive deeper into HTML & CSS and build more complex websites</p>
+        </li>
+        <li>
+            <h2>Friday, April 5th</h2>
+            <p>Practice advanced HTML & CSS concepts</p>
+        </li>
+    </ol>
+</main>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    /* 🟩 text-align doesn't affect the element on which you add it,
+    but the nested content inside of the element. */
+    /* 이러한 이유로, images 를 center 정렬하고 싶더라도 images 에다가 text-align 을 붙이는게 아니라,
+    그 부모 태그인 body 태그에다가 text-align 을 붙이면 그 자식들(images 등)에게 적용됨! */
+    background-color: rgb(233, 215, 207);
+    margin: 50px;
+}
+h1 {
+    font-family: 'Oswald', sans-serif;  /* 🟩 custom font 는 '' 안에 집어넣어야 함! */
+    color: rgb(83, 75, 75);
+}
+p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 24px;
+}
+a {
+    font-family: 'Fira Sans', sans-serif;
+    text-decoration: none;
+    color: rgb(167, 1, 78);
+}
+a:hover {
+    text-decoration: underline;
+}

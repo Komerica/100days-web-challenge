@@ -1,0 +1,60 @@
+header {
+    margin-bottom: 64px;
+}
+h1 {
+    font-size: 48px;
+    color: rgb(71, 62, 62);
+    margin: 0;
+}
+#description {
+    margin: 20px 0;
+}
+/*header p {*/
+/*    margin-bottom: 36px;*/
+/*}*/
+a {
+    padding: 12px 48px;
+    background-color: rgb(167, 1, 78);
+    color: white;
+    border: 1px solid rgb(167, 1, 78);
+    border-radius: 4px;
+    font-size: 24px;
+    display: inline-block;  /*inline-block 을 해줘야 header tag 안에 모든 자식 tag 가 들어옴*/
+    margin: 0;
+}
+a:hover {
+    text-decoration: none;
+    background-color: rgb(180, 12, 90);
+}
+ol {
+    list-style: none;
+    width: 500px;
+    margin: 36px auto 0;
+    padding: 0;
+}
+li {
+    padding: 16px;
+    margin: 32px;
+    background-color: rgb(223, 136, 124);
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    /* 1) offset along the X axis */
+    /*   : move the shadow from being directly behind our element to the right a bit. */
+    /* 2) offset along the Y axis */
+    /*   : push the shadow down a bit */
+    /* 3) blur radius */
+    /*   : make the shadow radius a bit softer */
+    /* 4) color of box shadow */
+    /*   : Ex) rgba()*/
+}
+h2 {
+    color: rgb(78, 13, 5);
+    font-family: 'Oswald', sans-serif;
+}
+main p {
+    margin: 12px;
+    color: rgb(71, 29, 22);
+}
+.highlight-goal {
+    background-color: rgb(226, 115, 101);
+}

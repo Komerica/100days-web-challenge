@@ -1,0 +1,37 @@
+body {
+    background-color: mediumpurple;
+}
+#container {
+    background-color: rgb(82, 23, 81);
+    padding: 10px;
+    width: 600px;
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: nowrap;*/
+    /* 🟩 ↑ ↓ flex-flow = flex-wrap + flex-direction */
+    flex-flow: row nowrap;  /* default 라서 없어도 똑같음 */
+    align-items: center;    /* cross-axis 를 center */
+    justify-content: space-between;
+}
+
+p {
+    background-color: rgb(211, 88, 209);
+    margin: 10px;
+    width: 250px;
+}
+
+ul {
+    background-color: rgb(250, 146, 63);
+    list-style: none;
+    width: 250px;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;  /* 제일 오른쪽으로 몰기 */
+    text-align: right;  /* 글자 전부다 오른쪽으로 정렬 */
+}
+
+li {
+    background-color: rgb(238, 212, 192);
+    width: 100px;
+}
