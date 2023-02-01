@@ -42,3 +42,69 @@
 #hero-content a:hover {
     background-color: rgb(255, 238, 0);
 }
+
+#highlights {
+    /* 🟥 Margin collapsing(마진 충돌) 고치는 법 */
+    /* : simply add some padding to the parent */
+    padding: 24px; /* ✔ 마진 충돌 해결법 */
+
+    /* 🟩 그라데이션 넣기 (linear-gradient) */
+    background: linear-gradient(0deg, rgb(227, 255, 253), rgb(202, 243, 240));
+
+}
+
+#highlights h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(59, 65, 64);
+    margin: 24px 0;
+}
+#destinations {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto auto 40px;
+}
+.destination {
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+.destination p {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(124, 123, 123);
+    margin: 20px 0;
+}
+.destination img{
+    height: 200px;
+    width: 100%;
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    border-radius: 10px;
+    /* 🟩 object-fit: How images should be added to the container or displayed in the container */
+    object-fit: cover;  /* 이미지 컨테이너에 알맞게 나오게 하기 */
+    /* ✔ fill(default): resize to fit into the given dimension. (the image can be stretched if necessary or squished into the container */
+    /* ✔ contain: images won't be pushed into the container  squished  */
+    /* ✔ cover: fit images perfectly into the container */
+}
+.destination strong {
+    color: rgb(0, 160, 117);
+}
+
+footer {
+    background: linear-gradient(70deg, rgb(24, 24, 24), rgb(25, 29, 25));
+    padding: 36px 0;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+footer li {
+    width: 80px;
+    height: 80px;
+    margin: 0 50px;
+}
+footer img {
+    width: 100%;
+    height: 100%;
+}
