@@ -1,20 +1,21 @@
 body {
     background: linear-gradient(30deg, rgb(77, 77, 77), rgb(58, 58, 58));
-    color: rgb(68, 68, 68); /* 살짝 회색(grey) */
+    color: rgb(68, 68, 68); /* 🟪색깔: 살짝 회색(grey); 본문 */
 }
 header {
     position: static;
 }
 main ul {
-    width: 800px;
+    width: 1500px;
     margin: 0 auto;
 }
 main li {
     display: flex;
-    background-color: white;
+    background-color: grey;  /*🟨 white */
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     overflow: hidden;   /* 🟥 img 왼쪽 상하단에 border-radius 가 적응이 안되는 걸 되도록 해줌 */
+    width: 500px;
 }
 main li img {
     width: 300px;
@@ -34,7 +35,7 @@ main li img {
 .actions a {
     text-decoration: none;
     padding: 6px;
-    color: rgba(22, 211, 228);
+    color: rgba(22, 211, 228);  /*🟪색깔: 블루계열; 링크*/
     border-radius: 5px;
     /* ↑ 항상 여기다가 border-radius 해줌! */
     /* ↓ :hover 에다가 border-radius 하지말자! */

@@ -1,0 +1,50 @@
+body {
+  background-color: darkgreen;
+}
+main {
+  background-color: rgb(82, 23, 81);
+  padding: 10px;
+  width: 1000px;
+  margin: auto;
+}
+ul {
+  background-color: rgb(250, 146, 63);
+  list-style: none;
+  width: 800px;
+  margin: 10px auto;
+  padding: 10px;
+
+  /* 🟥 Grid */
+  display: grid;
+
+  /* 🔴 grid-template-columns */
+  /*    : Pre-define a specific column count inside a grid */
+  /*      width(800px) 를 반으로 나눈다 ↓ */
+  /*      But grid 할때는 "px"을 잘안쓰고 fr(fraction) 씀! */
+  grid-template-columns: 1fr 1fr;
+
+  /* 🔴 gap */
+  /*    : Define the space between the different elements */
+  gap: 100px 200px;
+    /* 100px: gaps between each of the rows */
+    /* 200px: gaps between columns */
+}
+li {
+  background-color: rgb(238, 212, 192);
+  text-align: center;
+  width: 200px;
+  margin: 20px auto;
+}
+li:nth-of-type(3) {
+  background-color: yellow;
+  /* 🔴 grid-column */
+  /*    : how many columns it should occupy */
+  /*      ↓ ↓ inspect 들어가서 grid 클릭해보면 ↓ ↓ */
+  /*      Start at Position 1, end at Position 3 */
+  grid-column: 1 / 3;
+  /* ✔ span: tells me how many columns this element(li:nth-of-type(3)) should occupy */
+  /*      Ex) grid-column: 1 / span 3; */
+  /*       -> li:nth-of-type(3) <- 이 한 요소가 3열을 차지 */
+
+
+}
