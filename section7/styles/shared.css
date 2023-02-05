@@ -15,7 +15,7 @@ header {
     align-items: center;
     padding: 15px 60px;
 
-    /* 🟥 Take the header out of the document flow by adding "position: absolute", then main>section 에 있는 background-image 를 위로 끌어올릴 수 있음! */
+    /* 🟥 Take the header out of the document flow by adding "position: absolute", then main>section 에 있는 background-image 를 위로 끌어올릴 수 있음!
     position: absolute;
     top: 0; /* body 안의 첫번째 tag(header)라 top, left 안붙여줘도 좌측상단으로 붙는다! (생략 가능하지만, 구조가 바뀔수도 있으니 붙여주자!) */
     left: 0;
