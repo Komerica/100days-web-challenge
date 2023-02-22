@@ -1,0 +1,115 @@
+/* 🟥: 중요개념 */
+/* 🔴: 중요개념 적용 + 설명 */
+/* 🟡: 예외 (stick with the px value */
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    background-color: rgb(44, 41, 38);
+}
+a {
+    text-decoration: none;
+}
+#main-header {
+    height: 5rem; /* 🔴 root(html) font-size(16px)의 5배 = 16px * 5 = 80px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 26 ,24);
+    padding: 0 5%;  /* 🔴 parent(body) width 의 5% 만큼 차지 */
+}
+#logo {
+    font-size: 1.5rem;  /* 🔴 root(html) font-size(16px)의 1.5배 = 16 * 1.5 = 24px */
+    font-weight: bold;
+    color: rgb(238, 164, 80);
+    text-transform: uppercase;
+}
+#main-header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+#main-header li {
+    margin: 0 1rem; /* 🔴 root(html) font-size(16px)의 1배 = 16px * 1 = 16px */
+}
+#main-header nav a {
+    color: rgb(185, 131, 31);
+    font-size: 1.25rem; /* 🔴 root(html) font-size(16px)의 1.25배 = 16px * 1.25 = 20px */
+}
+#main-header nav a:hover {
+    color: rgb(228, 163, 44);
+}
+
+main h1 {
+    text-align: center;
+    color: rgb(238, 164, 80);
+    /* 🔥 In a context that is related to "font-size" 🔥 */
+    /* ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ */
+    font-size: 3rem;    /* px = fixed font size */
+    /* 🟥 ↑ px (fixed size) */
+    /*   : px로 font-size 를 고정시켜 버리면, Chrome 의 Settings -> Appearance -> Customize fonts 에서 font size 를 크게 해도 반영이 안된다! */
+    /* 🟥 % */
+    /*   : Relative to parent element size(부모에 따라서 % 결정) */
+    /*      ❌ Hard to manage due to cascading nature ❌ */
+    /* 🟥 em (Ephemeral Unit) [*ephemeral: 수명이 짧은, 단명하는] */
+    /*   : Size is relative to font-size */
+    /*      ❌ Hard to manage due to cascading nature ❌ */
+
+    /*  📌 % VS em */
+    /*    : They are similar when working in the font size context but there's difference when not working in the font size context! */
+
+    /* 🟥 rem (Root Ephemeral Unit) */
+    /*   : Size is relative to root element's font size */
+    /*      ✔ root element = html element */
+}
+#latest-products {
+    width: 80%; /* 🟥 main(ancestor) 의 80% 만큼 */
+    margin: 2rem auto;  /* 🔴 root(html) font-size(16px)의 2배 = 16px * 2 = 32px */
+    /* ↑ center 정렬, 가운데정렬 */
+}
+#latest-products ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;  /* 🔴 root(html) font-size(16px)의 1배 = 16px * 1 = 16px */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.food-item {
+    background-color: rgb(228, 206, 102);
+    border-radius: 6px; /* 🟡 Stick with px value */
+    overflow: hidden;
+}
+.food-item img {
+    height: 15rem;  /* 🔴 root(html) font-size(16px)의 15배 = 16px * 15 = 240px */
+    width: 100%;
+    object-fit: cover;
+}
+.food-item-content {
+    /* 🔥 In a context that is NOT related to "font-size" 🔥 */
+    /*      Ex) padding, margin, height */
+    /* ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ */
+    /*padding: 16px;*/
+    /*padding: 10%;*/
+    /* 🟥 ↑ padding 에 %를 주면 relative to the width of the parent element */
+    /*padding: 0.1em;*/
+    /* 🟥 ↑ padding 에 em 을 주면 relative to the font size of the CURRENT element */
+    padding: 1rem;
+    /* 🟥 ↑ padding 에 rem 을 주면 relative to the font size of the ROOT element */
+    text-align: center;
+}
+.btn {
+    background-color: rgb(228, 157, 44);
+    color: white;
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
+}
+.btn:hover {
+    background-color: rgb(221, 134, 34);
+}
+
+
+
+.food-items {
+    margin: 0 20px;
+}
