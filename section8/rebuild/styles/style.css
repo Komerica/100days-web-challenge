@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    background-color: rgb(44, 41, 38);
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/*📍Header*/
+#main-header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1D1A18;
+    padding: 0 5%;
+}
+#logo {
+    color: #EEA450;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+#main-header nav a {
+    color: #b9831f;
+}
+#main-header nav a:hover {
+    color: #E49F22;
+}
+#main-header ul {
+    display: flex;
+    list-style: none;
+}
+#main-header li {
+    margin: 0 1rem;
+}
+.hamburger {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+/*📍Side Drawer*/
+#side-drawer {
+    width: 100%;
+    height: 100%;
+    background-color: #1D1A1B;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#side-drawer:target {
+    display: block;
+}
+#side-drawer header {
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+}
+#side-drawer ul {
+    margin: 0;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#side-drawer li {
+    margin: 1rem 0;
+}
+#side-drawer nav a {
+    color: #FDEFD5;
+    font-size: 2rem;
+}
+
+/*📍Main*/
+main {
+    text-align: center;
+}
+main h1 {
+    color: #EEA450;
+    font-size: 3rem;
+}
+#food-items {
+    width: 80%;
+    margin: 2rem auto;
+}
+#food-items ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.food-item {
+    background-color: #E4CE66;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.food-item img {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+}
+.food-item-content {
+    padding: 1rem;
+}
+.food-item-content h2 {
+    margin: 0 0 1rem;
+}
+.btn {
+    background-color: rgb(228, 157, 44);
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 4px;
+}
+.btn:hover {
+    background-color: #DD8622;
+}
+
+@media (max-width: 48rem) {
+    #main-header nav {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    main h1 {
+        font-size: 1.5rem;
+    }
+    #food-items ul {
+        grid-template-columns: 100%;
+        /*grid-template-columns: 1fr;*/
+    }
+
+}

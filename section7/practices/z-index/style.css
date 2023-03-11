@@ -1,0 +1,20 @@
+div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    color: white;
+}
+
+#first {
+    background-color: rgb(55, 117, 209);
+    z-index: 1;
+    position: relative;
+    /* ↑ 🟥 default 값 static 을 제외한 나머지 값을 넣어줘야 z-index 가 정상적으로 작동한다!*/
+}
+
+#second {
+    background-color: rgb(233, 137, 59);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
